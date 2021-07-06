@@ -7,3 +7,4 @@
 * Pull request시 메시지 상세하게 남길것 (무엇이 바뀌고, 추가 됐는지)
 
 
+07-06 16:33 admin mainpage 추가
