@@ -43,8 +43,22 @@ ul{
   margin-top: 100px;
 }
 
+/* 메인 - 옆에 따라다니는 메뉴 */
+.maginContainer > .quick {
+    border: 1px solid;
+    position:fixed;
+    top:67%;
+    right:30px;
+    margin-left:30px;
+    width:60px;
+    white-space:nowrap;
+}
+.maginContainer > .quick span {
+    font-size:10px;
+}
+
 /*왼쪽메뉴 토글*/
-#leftmenuToggle {
+.leftmenuToggle {
   display: block;
   position: relative;
   padding-top: 15px;
@@ -56,7 +70,7 @@ ul{
 
 }
 
-#leftmenuToggle input{
+.leftmenuToggle input{
   display: block;
   width: 30px;
   height: 20px;
@@ -72,7 +86,7 @@ ul{
   -webkit-touch-callout: none;
 }
 
-#leftmenuToggle span {
+.leftmenuToggle span {
 
   display: block;
   width: 33px;
@@ -92,41 +106,42 @@ ul{
               opacity 0.55s ease;
 }
 
-#leftmenuToggle span:first-child {
+.leftmenuToggle span:first-child {
   transform-origin: 0% 0%;
 }
 
-#leftmenuToggle span:nth-last-child(2) {
+.leftmenuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
 
-#leftmenuToggle input:checked ~ span {
+.leftmenuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
 
-#leftmenuToggle input:checked ~ span:nth-last-child(3) {
+.leftmenuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#leftmenuToggle input:checked ~ span:nth-last-child(2) {
+.leftmenuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
 
 
-#leftmenu {
-    border-radius: 30px;
-    display: block;
-    margin-top: 0;
+.hoverEvent {
+
+  border-radius: 30px;
+  display: inline-block;
+  margin-top: 0;
   position: fixed;
-  width: 200px;
-  height: 300px;
+  width: 250px;
+  height: 100%;
   line-height: -35vh;
-  margin: -32px 100px -160px -160px;
+  margin: -32px 100px -210px -210px;
   padding-top: 150px;
   text-align:center;
 
@@ -140,7 +155,7 @@ ul{
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
-#leftmenu li {
+.hoverEvent li {
 
   padding: 10px 20px;
   font-size: 15px;
@@ -148,7 +163,7 @@ ul{
 
 }
 
-#leftmenu ui {
+.hoverEvent ui {
 
   padding: 10px 20px;
   font-size: 15px;
@@ -162,12 +177,12 @@ ul{
 }
 
 
-#leftmenuToggle input:checked ~ ul {
+.leftmenuToggle input:checked ~ ul {
   transform: none;
 }
 
 .left-bar{
-  height: 400px;
+  height: 390px;
 
 }
 
@@ -552,6 +567,7 @@ li a:hover {
 }
 
 footer {
+  height: 20%;
   display: block;
   position: fixed;
   border-top: 1px solid #e4e4e4;
@@ -560,16 +576,6 @@ footer {
   margin: 1rem 0;
   position: relative;
   padding: 88px 20px 45px;
-}
-
-.footer:after {
-    content: "";
-    position: absolute;
-    top: 50px;
-    left: 0;
-    right: 0;
-    height: calc(100% - 50px);
-    background: #f7f7f7;
 }
 
 .footer-message {
