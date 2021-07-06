@@ -1,6 +1,6 @@
 # [Start Bootstrap - Shop Homepage](https://startbootstrap.com/template-overviews/shop-homepage/)
 
-[Shop Homepage](http://startbootstrap.com/template-overviews/shop-homepage/) is a basic HTML online store homepage template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+중요사항 있으면 알리기
 
 ## Preview
 
