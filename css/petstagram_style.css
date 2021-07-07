@@ -43,9 +43,10 @@ img {
     cursor: pointer;
 }
 
-.btn:focus {
-    outline: 0.5rem auto #4d90fe;
+#button-addon2:hover {
+    color:  #2AC1BC;
 }
+
 
 .visually-hidden {
     position: absolute !important;
@@ -375,6 +376,9 @@ Remove or comment-out the code block below to see how the browser will fall-back
     }
 }
 
+/* profile ul sort */
+ul{list-style:none;margin:0;padding:0}
+
 /* header */
 .header-area .main-header{padding:0px 120px}
 @media only screen and (min-width: 1200px) and (max-width: 1600px){.header-area .main-header{padding:0px 10px}}
@@ -386,23 +390,11 @@ Remove or comment-out the code block below to see how the browser will fall-back
 .header-area .main-header .menu-wrapper .main-menu ul li{display:inline-block;position:relative;z-index:1}
 .header-area .main-header .menu-wrapper .main-menu ul li a{font-size:16px;font-family:"Josefin Sans",sans-serif;color:#141517;font-weight:600;padding:41px 21px;display:inline-block;text-transform:capitalize;display:block;-webkit-transition:all .3s ease-out 0s;-moz-transition:all .3s ease-out 0s;-ms-transition:all .3s ease-out 0s;-o-transition:all .3s ease-out 0s;transition:all .3s ease-out 0s;text-decoration: none;}
 .header-area{display:block;position:fixed;z-index: 500;background: #fafafa;top:0; left: 0;right: 0;border-bottom: #ecedef solid 1px;}
+
 /* menu hover color */
 .header-area .main-header .menu-wrapper .main-menu ul li:hover>a{color:#2AC1BC;text-decoration: none;}
 
-/* profile ul sort */
-ul{list-style:none;margin:0;padding:0}
-
-.links {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-.link_text {
-    font-size: 10px;
-    margin-left: 5px;
-    text-decoration: none;
-    color: #888;
-}
-.navigation{
-    display: flex;
-}
+/* 좌측최상단 회원가입/로그인/고객센터 */
+.links {position: absolute; top: 0; right: 0;}
+.link_text {font-size: 10px; margin-left: 5px; text-decoration: none; color: #888;}
+.navigation{display: flex;}
