@@ -1,53 +1,57 @@
-/* 이벤트 탭 */
-.event-tab {
-  width: 100%;
-  padding: 10px;          
-  background: #ffffff;
-}
-section {
-  display: none;
-  padding: 20px 0 0;
-}
-input {
-  display: none;
-}
-label {
-  display: inline-block;
-  padding: 15px 25px;
-  font-weight: 600;
-  color: #bbb;
-  border: 1px solid transparent;
-}
-label:hover {
-  color: #2AC1BC;
-  cursor: pointer;
-}
-input:checked + label {
-  color: #2AC1BC;
-  border-bottom: 1px solid #ffffff;
-}
-#tab1:checked ~ #content1,
-#tab2:checked ~ #content2{
-  display: block;}
 
+.event-box{
+    width: 1010px;
+    height: 400px;
+    display: block;
+    margin: auto;
+    margin-bottom: 100px;
+    
+}
+.event-box img{
+    width: 1010px;
+    height: 360px;
+}
 
-/* 이벤트 */
-.event-items .single-event-items .event-img{
-  overflow:hidden;
-  margin-bottom:19px;
-  margin-bottom:19px;
-  position:relative;
-  height: 100%;
-  width:100%;
+.event-caption h3{
+    color:black;
+    font-weight:700;
+    font-size:24px;
+    margin-bottom:5px
 }
-.event-caption h3 a{
-  color:black;
-  font-weight:700;
-  font-size:24px;
-  margin-bottom:5px
+.event-caption p{
+    color:#444444;
+    font-size:15px;
+    margin-bottom:12px
 }
-.event-caption p a{
-  color:#444444;
-  font-size:15px;
-  margin-bottom:12px
+
+/* header */
+.header-area .main-header{padding:0px 120px}
+@media only screen and (min-width: 1200px) and (max-width: 1600px){.header-area .main-header{padding:0px 10px}}
+@media only screen and (min-width: 992px) and (max-width: 1199px){.header-area .main-header{padding:0px 10px}}
+@media only screen and (min-width: 768px) and (max-width: 991px){.header-area .main-header{padding:22px 0px}}
+@media only screen and (min-width: 576px) and (max-width: 767px){.header-area .main-header{padding:22px 0px}}
+@media (max-width: 575px){.header-area .main-header{padding:22px 0px}}
+.header-area .main-header .menu-wrapper{display:flex;align-content:center;justify-content:space-between;flex-wrap:wrap;align-items:center;}
+.header-area .main-header .menu-wrapper .main-menu ul li{display:inline-block;position:relative;z-index:1}
+.header-area .main-header .menu-wrapper .main-menu ul li a{font-size:16px;font-family:"Josefin Sans",sans-serif;color:#141517;font-weight:600;padding:41px 21px;display:inline-block;text-transform:capitalize;display:block;-webkit-transition:all .3s ease-out 0s;-moz-transition:all .3s ease-out 0s;-ms-transition:all .3s ease-out 0s;-o-transition:all .3s ease-out 0s;transition:all .3s ease-out 0s;text-decoration: none;}
+.header-area{display:block;position:fixed;z-index: 500;background: #fafafa;top:0; left: 0;right: 0;border-bottom: #ecedef solid 1px;}
+/* menu hover color */
+.header-area .main-header .menu-wrapper .main-menu ul li:hover>a{color:#2AC1BC;text-decoration: none;}
+
+/* profile ul sort */
+ul{list-style:none;margin:0;padding:0}
+
+.links {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.link_text {
+    font-size: 10px;
+    margin-left: 5px;
+    text-decoration: none;
+    color: #888;
+}
+.navigation{
+    display: flex;
 }
