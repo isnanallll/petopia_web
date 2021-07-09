@@ -1,12 +1,12 @@
 /* font nexon lv1 gothic */
-@font-face {font-family: 'NEXON Lv1 Gothic OTF Light';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+@font-face {font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
     font-weight: normal;font-style: normal;}
-body{font-family: 'NEXON Lv1 Gothic OTF Light';}
+body{font-family: 'NEXON Lv1 Gothic OTF';}
 
 /* left toggle */
-.leftmenuToggle {display: block;position: relative;margin: 20px 30px 0 0;z-index: 1;-webkit-user-select: none;user-select: none;}
-.leftmenuToggle input{display: block; width: 30px; height: 20px; position: absolute; cursor: pointer; opacity: 0; z-index: 2; -webkit-touch-callout: none;}
+.leftmenuToggle {display: block; position: relative; margin: 20px 30px 0 0;z-index: 100;-webkit-user-select: none;user-select: none;}
+.leftmenuToggle input{display: block; width: 33px; height: 30px; position: absolute; cursor: pointer; opacity: 0; z-index: 2; -webkit-touch-callout: none;}
 .leftmenuToggle span {display: block; width: 33px; height: 4px; margin-bottom: 7px; position: relative; background: #2AC1BC; border-radius: 3px;
     z-index: 1; transform-origin: 4px 0px; transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), 
     background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;}
@@ -39,11 +39,11 @@ ul{list-style:none;margin:0;padding:0}
 @media (max-width: 575px){.header-area .main-header{padding:22px 0px}}
 .header-area .main-header .menu-wrapper{display:flex;align-content:center;justify-content:space-between;flex-wrap:wrap;align-items:center;height: 110px;}
 .header-area .main-header .menu-wrapper .main-menu ul li{display:inline-block;position:relative;z-index:1}
-.header-area .main-header .menu-wrapper .main-menu ul li a{font-size:18px;font-family: 'NEXON Lv1 Gothic OTF Light';color:#141517;font-weight:600;
+.header-area .main-header .menu-wrapper .main-menu ul li a{font-size:18px;font-family: 'NEXON Lv1 Gothic OTF';color:#141517;font-weight:600;
     padding:41px 21px;display:inline-block;text-transform:capitalize;display:block;-webkit-transition:all .3s ease-out 0s;
     -moz-transition:all .3s ease-out 0s;-ms-transition:all .3s ease-out 0s;-o-transition:all .3s ease-out 0s;transition:all .3s ease-out 0s;
     text-decoration: none;padding-bottom: 20px;}
-.header-area{display:block;position:fixed;background: #fff;top:0; left: 0;right: 0;border-bottom: #ecedef solid 1px;}
+.header-area{display:block;position:fixed;background: #fff;top:0; left: 0;right: 0;border-bottom: #ecedef solid 1px;z-index: 100;}
 
 /* menu hover color */
 .header-area .main-header .menu-wrapper .main-menu ul li:hover>a{color:#2AC1BC;text-decoration: none;}
@@ -54,17 +54,23 @@ ul{list-style:none;margin:0;padding:0}
 .navigation{display: flex;}
 
 /* nav search */
-.searchBtn {display: inline-block;font-family: 'NEXON Lv1 Gothic OTF Light';background: none;border: none;color: inherit;padding: 0;
+.searchBtn {display: inline-block;font-family: 'NEXON Lv1 Gothic OTF';background: none;border: none;color: inherit;padding: 0;
     cursor: pointer;}
 .searchBtn:hover{color: #2AC1BC;}
-.wishBtn {display: inline-block;font-family: 'NEXON Lv1 Gothic OTF Light';background: none;border: none;color: inherit;padding: 0;
+.wishBtn {display: inline-block;font-family: 'NEXON Lv1 Gothic OTF';background: none;border: none;color: inherit;padding: 0;
     cursor: pointer;margin-left: 30px;}
 .wishBtn:hover{color: #2AC1BC;}
-.cartBtn {display: inline-block;font-family: 'NEXON Lv1 Gothic OTF Light';background: none;border: none;color: inherit;padding: 0;
+.cartBtn {display: inline-block;font-family: 'NEXON Lv1 Gothic OTF';background: none;border: none;color: inherit;padding: 0;
     cursor: pointer;margin-left: 20px;}
 .cartBtn:hover{color: #2AC1BC;}
 .searchForm {border:1px solid #999999; border-radius: 10px; font-size: 7px; width: 180px; height: 30px; padding-left: 10px;}
 .search {margin-top: 15px;}
+
+/* footer */
+footer{bottom: 0; background-color: #385663; color: #fff; padding: 30px 0;}
+footer .container-fluid{position: relative; display: block; text-align: center;}
+footer .container-fluid img{display: block; margin: 0px auto; align-items: center;}
+footer .container-fluid p{margin: 0; font-size: 11px;}
 
 /*=====================================================================================*/
 /* sidebar base */
@@ -103,3 +109,8 @@ a{text-decoration: none; color: black;}
 .down{position: absolute; font-size:1.3rem; right:10%; top: 50%; transform: translateY(-50%) rotate(360deg);
    -webkit-transition: .5s ease; transition: .5s ease;}
 .wtok .down {-webkit-transform: translateY(-50%) rotate(180deg); transform: translateY(-50%) rotate(180deg)}
+
+
+
+/* main 여백 // 붙여넣기 하지말것! */
+main{height: 700px;}
