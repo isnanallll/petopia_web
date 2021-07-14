@@ -1,0 +1,289 @@
+<!Doctype html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>회원정보 수정</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/petopia_logomini.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://wagtrung.github.io/store/themify-icons/themify-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="join_style.css">
+    <link rel="stylesheet" href="myPet_insert.css">
+</head>
+<body>
+    <script>
+        var curKind = '';
+    
+        function fnClick() {
+            var kind = document.getElementById('txtKind').value;
+    
+            document.getElementsByName('rstText').innerHTML = kind;
+            document.getElementsByName('txtGetKind').value = kind;
+        }
+    
+    
+        function handleClick(objKind) {
+            curKind = objKind.value;
+            var lblKind = curKind == 'cat' ? '묘종' : '견종';
+    
+            document.getElementById('choiceText').innerHTML = lblKind;
+        }
+    
+    
+        function button1_click() {
+            console.log("버튼1을 누르셨습니다.");
+        }
+    </script>
+    <header>
+        <!-- Header Start -->
+        <div class="header-area">
+            <div class="main-header header-sticky">
+                <div class="container-fluid">
+                    <div class="menu-wrapper">
+                        <div class="links">
+                            <a href="joinagree.html" class="link_text">회원가입</a>
+                            <a href="login.html" class="link_text">로그인</a>
+                            <a href="#" class="link_text">고객센터</a>
+                        </div>
+
+                        <nav class="header-nav">
+                            <div id="leftmenuToggle" class="leftmenuToggle">
+                                <input type="checkbox"/>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <ul id="leftmenu" class="hoverEvent">
+                                    <div class="adiv">
+                                        <li><a href="petstagram.html">펫★그램</a></li>
+                                        <li><a href="main.html">펫shop</a></li>
+                                        <li><a href="donation.html">기부</a></li>
+                                        <li><a href="mypage.html"><i class="fas fa-paw"></i> MY</a></li>
+                                    </div>
+                                </ul>
+                            </div>
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a href="main.html"><img src="images/petopia_logo.png" alt=""></a>
+                        </div>
+                        </nav>
+                          
+                        <!-- Main-menu -->
+                        <div class="main-menu d-none d-lg-block">
+                            <nav>                                                
+                                <ul id="navigation">  
+                                    <li><a href="petstagram.html">펫★그램</a></li>
+                                    <li><a href="main.html">펫shop</a></li>
+                                    <li><a href="donation.html">기부</a></li>
+                                    <li><a href="mypage.html"><i class="fas fa-paw"></i> MY</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- Header Right -->
+                        <div class="search">
+                            <input type="text" class="searchForm" placeholder="검색어를 입력해주세요." aria-label="Recipient's username" aria-describedby="button-addon2" >
+                            <button class="searchBtn" type="submit"><i class="fas fa-search"></i></button>
+                            <button class="wishBtn" type="link"><i class="fas fa-heart"></i></button>
+                            <button class="cartBtn" type="link"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-none d-lg-block"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    <!-- Header End -->
+    </header>
+    <main>
+        <div class="main">
+            <h3>내새꾸를 등록해보세요!</h3>
+            <div class="result">
+                <span class="blue">필수정보를 입력</span>해주세요.
+            </div>
+
+            <article class="one">   <!-- article 기능이 뭔지 (두개 다)? -->
+                <article class="find1">
+                    <div>
+                        <section id="content3">
+                        <div class="info">
+                            * 모든 항목은 필수 입력 항목입니다.<br>
+                        </div>
+                             
+                        <div>
+                            <!-- <div>어떤 반려동물과 함께 하시나요?</div> -->
+                            <div>
+                                <p class="pb0">어떤 반려동물과 함께 하시나요?</p>
+                                <p><span id='choiceText'>&nbsp;</span></p>
+                                <p>이름</p>
+                                <p>성별</p>
+                                <p>나이</p>
+                                <p>생년월일</p>
+                                <p>몸무게</p>
+                                <p>중성화 여부</p>
+                                <p>염려질환</p>
+                                <p>&nbsp</p>
+                                <p>이메일 주소</p>
+                            </div>
+                       
+                            <div>
+                                <div class="choice">
+                                    <input type="radio" name="kind" onclick="handleClick(this)" value="cat"> 고양이 <input type="radio" name="kind" onclick="handleClick(this)" value="dog"> 강아지
+                                </div>
+                                <div style='width:300px'>
+                                    <!-- <span id='choiceText'></span> -->
+                            
+                                    <!-- <span style='float:right;font-size: small;'>* 필수 입력 정보</span>
+                                    </br> -->
+                                    <input type='text' id='txtKind' style='width:250px'></input>
+                                </div>
+                                <input type="text" placeholder="이름을 적어주세요"><br>
+                                <div class="choice">
+                                    <input type="radio" name="gender" value="male"> 남아
+                                    <input type="radio" name="gender" value="female"> 여아
+                                </div><br>
+                                <input type="password" placeholder="영문, 숫자 조합 6~12자"><br>
+                                <input type="password" placeholder="영문, 숫자 조합 6~12자"><br>
+                                <input type="tel" placeholder="예) 010-1234-5678">
+                                <button class="doublecheck">중복확인</button><br>
+                                <input type="address" placeholder="우편번호" class="address1">
+                                <button class="address-btn">주소검색</button><br>
+                                <input type="address" placeholder="도로명주소"><br>
+                                <input type="address" placeholder="상세주소"><br>
+                                
+                                <input type="email"> @ <input type="email">
+                                <select size="1">
+                                <option>naver.com</option>
+                                <option>gmail.com</option>
+                                <option>hanmail.net</option>
+                                <option>hotmail.com</option>
+                                <option>nate.com</option>
+                                <button class="doublecheck">중복확인</button><br>
+                                </select>
+                            </div>
+                        </div>
+    
+                        <a href="welcome.html"><button class="join-btn">수정하기</button></a>
+                    </section>
+                    </div>
+                </article>
+            </article>
+        </div>
+    </main>
+<!-- footer -->	
+<footer>
+    <div class="container-fluid">
+        <img src="images/petopia_logomini.png">
+        </br>
+        <p>PETOPIA</p>
+        </br>
+        <p>서비스 이용약관 | 개인정보 처리방침 | 입점/제휴 문의</p>
+        </br>
+        <p>Naru Juhee Gunwoo Ahram Hansol Hana</p>
+        <p>Bitcamp Jongno</p>
+        </br>
+        <p>&copy Creative 2021-08</p>     
+    </div> 
+</footer>  
+<!--// footer -->
+
+</body>
+</html>
+
+
+<!-- <script>
+    $("document").ready(function() {
+        //해당 페이지의 첫 진입점
+        //ex) 로그인한 사용자의 id 를 display
+        $("#txtId").val('isnana');
+    })
+
+    //테스트용 버튼!!!!
+    $("#btnTest").click(function() {
+        $("#txtId").attr('readonly', true);
+        $("#txtId").addClass('disabledInput');
+    })
+</script> -->
+
+    
+    <!-- <p id="demo"></p>
+    <p>내새꾸를 등록해보세요!</p>
+
+    
+
+
+    <!-- 입력 
+    <span>어떤 반려동물과 함께 하시나요?</span><br>
+    <input type="radio" name="kind" onclick="handleClick(this)" value="cat"> 고양이
+    <input type="radio" name="kind" onclick="handleClick(this)" value="dog"> 강아지
+
+    <div style='width:300px'>
+        <span id='choiceText'></span>
+
+        <span style='float:right;font-size: small;'>* 필수 입력 정보</span>
+        </br>
+        <input type='text' id='txtKind' style='width:250px'></input>
+    </div>
+
+    <div>
+        <span>이름 *</span><br>
+        <input id="name" type="text" size="30" maxlenght="20" value="">
+        <input type="submit" value="확인">
+    </div>
+
+    <div>
+        <span>성별 *</span><br>
+        <input type="radio" name="gender" onclick="genderClick(this)" value="m">남아
+        <input type="radio" name="gender" onclick="genderClick(this)" value="f">여아
+    </div>
+
+    <div>
+        <span>나이 *</span><br>
+        <label>생년월일을 선택해주세요.</label><br>
+        <input type="date">
+    </div>
+    <br><br>
+
+    <!--몸무게 소수점 1자리까지 입력 설정
+    <div>
+        <span>몸무게</span><br>
+        <input type="number" step="0.1" value="kg">
+    </div>
+
+    <div>
+        <span>중성화 여부 *</span><br>
+        <input type='button' id='중성화 전' onclick='button1_click();' value="중성화 후"><br>
+    </div>
+
+    <div>
+        <span>염려질환</span>
+    </div>
+
+    <!--버튼
+    <div>
+        <input type="button" value="저장" onclick="fnClick();"></input>
+    </div>
+
+    <!--조회
+    <div>
+        <input type="text" id="txtGetKind"></input>
+
+        </br>
+        </br>
+        </br>
+    </div>
+
+    <button type="button" onclick="file:///C:/Users/isnana/Desktop/petopia_web/myPet_insert.html"> 다음 </button>
+
+</body>-->
+<!-- javaScript-->
+
+</html> 
