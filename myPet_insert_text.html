@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>회원정보 수정</title>
+    <title>마이펫 등록</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/petopia_logomini.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
@@ -115,7 +115,7 @@
                     <div>
                         <section id="content3">
                         <div class="info">
-                            * 모든 항목은 필수 입력 항목입니다.<br>
+                            * 항목은 필수 입력 항목입니다.<br>
                         </div>
                              
                         <div>
@@ -123,20 +123,20 @@
                             <div>
                                 <p class="pb0">어떤 반려동물과 함께 하시나요?</p>
                                 <p><span id='choiceText'>&nbsp;</span></p>
-                                <p>이름</p>
-                                <p>성별</p>
-                                <p>나이</p>
+                                <p>이름 *</p>
+                                <p>성별 *</p>
+                                <p>나이 *</p>
                                 <p>생년월일</p>
                                 <p>몸무게</p>
                                 <p>중성화 여부</p>
                                 <p>염려질환</p>
                                 <p>&nbsp</p>
-                                <p>이메일 주소</p>
                             </div>
                        
                             <div>
                                 <div class="choice">
-                                    <input type="radio" name="kind" onclick="handleClick(this)" value="cat"> 고양이 <input type="radio" name="kind" onclick="handleClick(this)" value="dog"> 강아지
+                                    <input type="radio" name="kind" onclick="handleClick(this)" value="cat"> 고양이 
+                                    <input type="radio" name="kind" onclick="handleClick(this)" value="dog"> 강아지
                                 </div>
                                 <div style='width:300px'>
                                     <!-- <span id='choiceText'></span> -->
@@ -145,33 +145,19 @@
                                     </br> -->
                                     <input type='text' id='txtKind' style='width:250px'></input>
                                 </div>
-                                <input type="text" placeholder="이름을 적어주세요"><br>
+                                <input type="text" placeholder="아이의 이름을 입력해주세요"><br>
                                 <div class="choice">
                                     <input type="radio" name="gender" value="male"> 남아
                                     <input type="radio" name="gender" value="female"> 여아
                                 </div><br>
-                                <input type="password" placeholder="영문, 숫자 조합 6~12자"><br>
-                                <input type="password" placeholder="영문, 숫자 조합 6~12자"><br>
-                                <input type="tel" placeholder="예) 010-1234-5678">
-                                <button class="doublecheck">중복확인</button><br>
-                                <input type="address" placeholder="우편번호" class="address1">
-                                <button class="address-btn">주소검색</button><br>
-                                <input type="address" placeholder="도로명주소"><br>
-                                <input type="address" placeholder="상세주소"><br>
-                                
-                                <input type="email"> @ <input type="email">
-                                <select size="1">
-                                <option>naver.com</option>
-                                <option>gmail.com</option>
-                                <option>hanmail.net</option>
-                                <option>hotmail.com</option>
-                                <option>nate.com</option>
-                                <button class="doublecheck">중복확인</button><br>
-                                </select>
+                                <label>생년월일을 선택해주세요. </label><br>
+                                <input type="date"><br>
+                                <input type="number" step="0.1" value="kg"><br>
+                                <input type='button' id='중성화 전' onclick='button1_click();' value="중성화 후"><br>
+                                <input type="text" placeholder="염려질환을 입력해주세요"><br>                
                             </div>
                         </div>
-    
-                        <a href="welcome.html"><button class="join-btn">수정하기</button></a>
+                        <a href="welcome.html"><button class="join-btn">이전</button></a>   <a href="welcome.html"><button class="join-btn">다음</button></a>
                     </section>
                     </div>
                 </article>
